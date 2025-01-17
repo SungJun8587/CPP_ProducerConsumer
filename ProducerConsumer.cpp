@@ -21,16 +21,6 @@ void ProducerThread()
 {
 	while( !bStopProducerThread.load() )
 	{
-		/*
-		std::string connectionString = "DRIVER={SQL Server};SERVER=127.0.0.1,1433;Database=Common;UID=sa;PWD=dnpqxlaA123!@";
-		_tstring connectionString = _T("DRIVER=MySQL ODBC 8.1 UNICODE Driver;SERVER=127.0.0.1,Port=3306;Database=common;UID=root;Pwd=1234;MULTI_HOST=1;MULTI_STATEMENTS=1");
-
-		CBaseODBC odbcConn(EDBClass::MYSQL, connectionString.c_str());
-
-		if( odbcConn.Connect() )
-			std::cout << "Connected to DB Server successfully!" << std::endl;
-		*/
-
 		for( int i = 0; i < MAX_ROWS; i += BATCH_SIZE )
 		{
 			int currentBatchSize = BATCH_SIZE < (MAX_ROWS - i) ? BATCH_SIZE : MAX_ROWS - i;
