@@ -95,8 +95,7 @@
     <ClCompile Include="..\Library\UtilCore\DB\BaseODBC.cpp" />
     <ClCompile Include="..\Library\UtilCore\DB\OdbcAsyncSrv.cpp" />
     <ClCompile Include="..\Library\UtilCore\DB\OdbcConnPool.cpp" />
-    <ClCompile Include="..\Library\UtilCore\JSON\JSONBase.cpp" />
-    <ClCompile Include="..\Library\UtilCore\JSON\JSONParser.cpp" />
+    <ClCompile Include="..\Library\UtilCore\JSON\RapidJSONUtil.cpp" />
     <ClCompile Include="..\Library\UtilCore\Memory\CustomAllocator.cpp" />
     <ClCompile Include="..\Library\UtilCore\ServerConfig.cpp" />
     <ClCompile Include="..\Library\UtilCore\Thread\ThreadManager.cpp" />
@@ -121,8 +120,7 @@
     <ClInclude Include="..\Library\UtilCore\DB\DBEnum.h" />
     <ClInclude Include="..\Library\UtilCore\DB\OdbcAsyncSrv.h" />
     <ClInclude Include="..\Library\UtilCore\DB\OdbcConnPool.h" />
-    <ClInclude Include="..\Library\UtilCore\JSON\JSONBase.h" />
-    <ClInclude Include="..\Library\UtilCore\JSON\JSONParser.h" />
+    <ClInclude Include="..\Library\UtilCore\JSON\RapidJSONUtil.h" />
     <ClInclude Include="..\Library\UtilCore\Memory\Containers.h" />
     <ClInclude Include="..\Library\UtilCore\Memory\CustomAllocator.h" />
     <ClInclude Include="..\Library\UtilCore\Memory\ObjectPool.h" />
@@ -142,7 +140,7 @@
     <None Include="..\Library\UtilCore\DB\DB_ColAttr.inl" />
     <None Include="..\Library\UtilCore\DB\DB_Error.inl" />
     <None Include="..\Library\UtilCore\DB\DB_ParamAttr.inl" />
-    <None Include="..\Library\UtilCore\JSON\JSONParser.inl" />
+    <None Include="..\Library\UtilCore\JSON\RapidJSONUtil.inl" />
     <None Include="..\Library\UtilCore\Memory\Singleton.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

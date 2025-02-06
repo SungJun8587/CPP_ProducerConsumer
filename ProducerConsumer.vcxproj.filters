@@ -36,13 +36,10 @@
     <ClCompile Include="..\Library\UtilCore\Memory\CustomAllocator.cpp">
       <Filter>UtilCore\Memory</Filter>
     </ClCompile>
-    <ClCompile Include="..\Library\UtilCore\JSON\JSONBase.cpp">
-      <Filter>UtilCore\JSON</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Library\UtilCore\JSON\JSONParser.cpp">
-      <Filter>UtilCore\JSON</Filter>
-    </ClCompile>
     <ClCompile Include="DBAsyncHandler.cpp" />
+    <ClCompile Include="..\Library\UtilCore\JSON\RapidJSONUtil.cpp">
+      <Filter>UtilCore\JSON</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -106,14 +103,11 @@
     <ClInclude Include="..\Library\UtilCore\Memory\Singleton.h">
       <Filter>UtilCore\Memory</Filter>
     </ClInclude>
-    <ClInclude Include="..\Library\UtilCore\JSON\JSONBase.h">
-      <Filter>UtilCore\JSON</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Library\UtilCore\JSON\JSONParser.h">
-      <Filter>UtilCore\JSON</Filter>
-    </ClInclude>
     <ClInclude Include="DBAsyncHandler.h" />
     <ClInclude Include="DBAsyncStruct.h" />
+    <ClInclude Include="..\Library\UtilCore\JSON\RapidJSONUtil.h">
+      <Filter>UtilCore\JSON</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UtilCore">
@@ -151,7 +145,7 @@
     <None Include="..\Library\UtilCore\Memory\Singleton.inl">
       <Filter>UtilCore\Memory</Filter>
     </None>
-    <None Include="..\Library\UtilCore\JSON\JSONParser.inl">
+    <None Include="..\Library\UtilCore\JSON\RapidJSONUtil.inl">
       <Filter>UtilCore\JSON</Filter>
     </None>
   </ItemGroup>

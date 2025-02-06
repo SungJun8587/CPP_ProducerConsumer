@@ -43,8 +43,7 @@ using namespace std;
 
 #include <BaseGlobal.h>
 
-#include <JSON/JSONBase.h>
-#include <JSON/JSONParser.h>
+#include <JSON/RapidJSONUtil.h>
 
 #include <ServerConfig.h>
 
