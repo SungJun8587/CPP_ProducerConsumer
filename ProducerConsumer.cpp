@@ -107,6 +107,8 @@ int main()
 
 	SERVER_CONFIG->ReleaseInstance();
 
+	system("pause");
+
 	return 0;
 }
 
