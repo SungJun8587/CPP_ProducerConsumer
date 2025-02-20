@@ -40,6 +40,9 @@ DECLARE_DBASYNC_HANDLER(DBASYNC_BULKADD_CONSUMER_REQ)
 	if( !pOdbcConn->ExecDirect(_T("SELECT Name1, Name2, Flag, Age FROM Consumer WHERE 1=0")) )
 		return EDBReturnType::INVALID;
 
+	iName1Size = static_cast<int32>(_tcslen(pDBParam->_consumers[0].tszName1));
+	iName2Size = static_cast<int32>(_tcslen(pDBParam->_consumers[0].tszName2));
+
 	pOdbcConn->BindCol(pDBParam->_consumers[0].tszName1, iName1Size);
 	pOdbcConn->BindCol(pDBParam->_consumers[0].tszName2, iName2Size);
 	pOdbcConn->BindCol(pDBParam->_consumers[0].bFlag);

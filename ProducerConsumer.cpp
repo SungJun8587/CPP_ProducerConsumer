@@ -56,8 +56,8 @@ int main()
 
 	TCHAR tszTempArgv[FULLPATH_STRLEN] = { 0, };
 
-	_sntprintf_s(tszTempArgv, FULLPATH_STRLEN, _TRUNCATE, _T("config\\server_config_mssql.json"));
-	//_sntprintf_s(tszTempArgv, FULLPATH_STRLEN, _TRUNCATE, _T("config\\server_config_mysql.json"));
+	//_sntprintf_s(tszTempArgv, FULLPATH_STRLEN, _TRUNCATE, _T("config\\server_config_mssql.json"));
+	_sntprintf_s(tszTempArgv, FULLPATH_STRLEN, _TRUNCATE, _T("config\\server_config_mysql.json"));
 
 	if( false == SERVER_CONFIG->Init(tszTempArgv) )
 	{
@@ -73,12 +73,13 @@ int main()
 		return -1;
 	}
 
+	COdbcAsyncSrv::Instance()->StartIoThreads();
+	std::cout << "Consumer " << COdbcAsyncSrv::Instance()->_nMaxThreadCnt << " threads started." << std::endl;
+
 	gpThreadManager->CreateThread([=]() {
 		ProducerThread();
 	});
-
 	std::cout << "Producer 1 thread started." << std::endl;
-	std::cout << "Consumer " << COdbcAsyncSrv::Instance()->_nMaxThreadCnt << " threads started." << std::endl;
 
 	std::cout << "It is processing. Please wait a moment." << std::endl;
 	std::cout << "Press ESC to exit." << std::endl;
@@ -103,7 +104,7 @@ int main()
 	// wait main thread & check DEADLOCK
 	gpThreadManager->JoinThreads();
 
-	std::cout << "Thread processing completed.\n";
+	std::cout << "Thread processing completed." << std::endl;
 
 	SERVER_CONFIG->ReleaseInstance();
 
